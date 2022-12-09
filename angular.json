@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "app-a": {
+    "middle-hearth-demography": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -15,12 +15,12 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "mhd",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/app-a",
+            "outputPath": "dist/middle-hearth-demography",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -30,9 +30,12 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/portal-shell/assets/styles.scss",
               "src/styles.css"
             ],
-            "scripts": [],
+            "scripts": [
+              "./node_modules/chart.js/dist/chart.js"
+            ],
             "preserveSymlinks": true
           },
           "configurations": {
@@ -72,10 +75,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "app-a:build:production"
+              "browserTarget": "middle-hearth-demography:build:production"
             },
             "development": {
-              "browserTarget": "app-a:build:development"
+              "browserTarget": "middle-hearth-demography:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +86,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "app-a:build"
+            "browserTarget": "middle-hearth-demography:build"
           }
         },
         "test": {
@@ -98,9 +101,11 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/portal-shell/assets/styles.scss",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "preserveSymlinks": true
           }
         }
       }
