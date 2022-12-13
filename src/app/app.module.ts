@@ -4,7 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { PortalShellModule } from 'portal-shell';
+import { PortalShellModule } from 'the-one-portal-shell';
 
 import { AppComponent } from './app.component';
 

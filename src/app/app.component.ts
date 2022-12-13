@@ -3,9 +3,9 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'mhd-root',
   template: `
-  <lib-portal-shell>
+  <lib-the-one-portal-shell>
     <router-outlet></router-outlet>
-  </lib-portal-shell>
+  </lib-the-one-portal-shell>
   `,
   styleUrls: ['./app.component.css']
 })
