@@ -8,8 +8,8 @@ import { Character, CharacterRaceFilter, CharacterRealm, Characters } from '../i
   providedIn: 'root'
 })
 export class LotrCharacterService {
-
-  private _http = inject(HttpClient);
+  
+  constructor(private _http: HttpClient){}
   
   private _cachedCharacters$!: Observable<Characters>;
 
