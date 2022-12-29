@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, OnInit, ViewEncapsulation } from '@angular/core';
 import { AsyncPipe } from '@angular/common';
 import { LotrCharacterService } from '../services/lotr-character.service';
 import { EMPTY, Observable, BehaviorSubject, combineLatest } from 'rxjs';
@@ -27,12 +27,8 @@ const OTHERS = 'others'
   <mhd-races-filter [raceList]="raceList$ | async" (racesChanges)="races$.next($event)"></mhd-races-filter>
   <mhd-character-list [characters]="characters$ | async"></mhd-character-list>
  `,
-  styles: [`
-    div.graph-container {
-      width: 90%;
-      margin: auto;
-    }
-  `],
+  styleUrls: ['./character-statistics.component.scss'],
+  encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CharacterStatisticsComponent implements OnInit {
