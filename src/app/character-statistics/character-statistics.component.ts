@@ -27,7 +27,6 @@ const OTHERS = 'others'
   <mhd-races-filter [raceList]="raceList$ | async" (racesChanges)="races$.next($event)"></mhd-races-filter>
   <mhd-character-list [characters]="characters$ | async"></mhd-character-list>
  `,
-  styleUrls: ['./character-statistics.component.scss'],
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
