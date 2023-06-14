@@ -1,4 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
-body {
-    margin: 0;
-}
+/**
+ * Custom styles for the one quote application.
+ *
+ * But in order to keep style unicity, avoid applying custom global style changes.
+ * Style must be given by the portal library or by another dedicated style library.
+ * So this file must remain empty as much as possible.
+ */
